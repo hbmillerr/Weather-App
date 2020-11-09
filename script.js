@@ -14,6 +14,10 @@ window.onload = function() {
 	getLocation();
 } // window.onload
 
+// Register the service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/serviceworker.js');
+}
 
 // get activity from bored api
 function fetchData(latitude, longitude) {
