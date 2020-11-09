@@ -1,0 +1,190 @@
+/* rgb(25, 50, 125) */
+
+body, * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+	line-height: 1.6;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	/*font-size: 26px;*/
+	
+	/*background-color: rgb(52, 61, 75);*/
+	/*background-color: rgb(65, 90, 120);*/
+	
+	background-image: linear-gradient(rgba(25, 25, 25, 0.5), rgba(25, 25, 25, 0.5)), url('images/hero.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	
+	height: 100vh;
+	width: 100vw;
+}
+
+/* https://codepen.io/tutsplus/pen/gObLaEP */
+
+/* Navigation */
+
+header {
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	position: relative;
+	top: 0;
+	right: 0;
+	height: 60px;
+	width: 100vw;
+	
+	box-shadow:0px 2px 4px rgba(0, 0, 0, 0.25);
+	background-color: rgb(25, 60, 125);
+}
+
+#logo {
+	display: inline-block;
+	
+	font-size: 1.8rem;
+	letter-spacing: 2px;
+	color: rgb(255, 255, 255);
+}
+
+#navSearch {
+	display: flex;
+	align-items: center;
+	
+	width: 30%;
+	height: 65%;
+	max-width: 600px;
+	
+	padding: 0px 10px;
+	
+	border-radius: 24px;
+	background-color: rgba(240, 240, 240, 0.3);
+}
+
+#input {
+	width: 100%;
+	padding: 0px 10px;
+	
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: rgb(255, 255, 255);
+}
+
+#input::placeholder {
+	color: rgb(255, 255, 255);
+}
+
+#search {
+	color: rgb(255, 255, 255);
+	order: -1;
+}
+
+/* Grid Layout */
+
+
+#gridContainer {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	max-width: 1200px;
+	
+	margin: 24px auto;
+	
+	z-index: 100;
+}
+
+#cardContainer {
+	display: grid;
+	grid-template-areas: 
+	"card1"
+	"card2";
+	grid-gap: 12px;
+}
+
+#cardContainer > div {
+	width: 100%;
+	
+	border-radius: 12px;
+	background-color: rgb(255, 255, 255);
+}
+
+#card1 {
+	grid-area: card1;
+	
+	box-shadow: 0 0 12px 0 rgba(0,0,0,.2)
+}
+
+#card2 {
+	grid-area: card2;
+	
+	box-shadow: 0 0 12px 0 rgba(0,0,0,.2)
+}
+
+#card2 {
+	grid-area: card2;
+	
+	box-shadow: 0 0 12px 0 rgba(0,0,0,.2)
+}
+
+
+/* Weather Cards */
+
+/*Current Conditions*/
+
+#currentConditions {
+	padding: 20px 30px;
+}
+
+#currentConditionsLocation {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+#currentConditionsTime {
+	font-size: 1.25rem;
+}
+
+#currentConditionsData {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+#currentConditionsLeft {
+	text-align: left;
+}
+
+#currentConditionsRight {
+	text-align: right;
+	
+}
+
+#currentConditionsTemp {
+	font-size: 6rem;
+	font-weight: 500;
+	line-height: 1;
+}
+
+#currentConditionsDesc {
+	font-size: 1.5rem;
+	font-weight: 600;
+	
+	margin-top: -10px;
+}
+
+#currentConditionsData2 {
+	font-size: 1.05rem;
+	font-weight: 400;
+}
+
+/* Icons */
+
+.locationIcon {
+	display: inline-block;
+}

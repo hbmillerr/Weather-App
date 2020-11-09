@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Weather App</title>
+    
+		<!-- include an external style sheet -->
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">  
+    
+		<!-- include an external JavaScript file -->
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div id="logo">Weather API</div>
+			<div id="navSearch">
+				<input id="input" type="text" placeholder="Search Location">
+				<i id="search" onclick="fetchGeocode()" class="material-icons">search</i>
+			</div>
+			<i></i>
+		</header>
+		
+		<div id="main">
+			<div id="gridContainer">
+				<div id="cardContainer">
+					<div id="card1">
+						<div id="currentConditions">
+							<div id="currentConditionsHeader">
+								<div id="currentConditionsLocation">
+								<i class="material-icons">location_on</i>
+								Location
+								</div>
+								
+								<div id="currentConditionsTime">
+								12:00 AM
+								</div>
+							</div>
+							
+					
+							<div id="currentConditionsData">
+								<div id="currentConditionsLeft">
+									<div id="currentConditionsTemp"> 11° </div>
+									<div id="currentConditionsDesc"> Desc </div>
+								</div>
+								
+								<div id="currentConditionsRight">
+									<img id="currentConditionsIcon" src="" alt="Icon">
+								</div>
+							</div>
+							
+							<div id="currentConditionsData2">
+								<div id="currentConditionsPrecip"> Precipiation: 0% </div>
+								<div id="currentConditionsHumidity"> Humudity: 0% </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="card2">
+					Today's Forecast
+					</div>
+					
+					<div id="card3">
+					Weather in City
+					</div>
+					
+					<div id="card4">
+					Hourly Forecast
+					</div>
+					
+					<div id="card5">
+					Daily Forecast
+					</div>
+					
+					<div id="card6">
+					Weather Map
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
