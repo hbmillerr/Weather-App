@@ -1,15 +1,15 @@
-const version = 'v1';
+const version = 'v5';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(version).then(function(cache) {
       return cache.addAll([
         '/',
-        '/index.html',
-        '/style.css',
+       '/index.html', 
+        '/style.css', 
         '/script.js',
-		'/images/hero.jpg',
-		'notfound.txt'
+		    '/images/hero.jpg',
+		    'notfound.txt'
       ]);
     })
   );

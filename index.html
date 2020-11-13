@@ -2,13 +2,19 @@
 	<html lang="en">
 	<head>
 	<!-- Attribute Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+    <title>Weather App</title>
+    
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Weather App</title>
+    <meta name="Description" content="A weather app that displays the forecast.">
+    <meta name="theme-color" content="#4a90e2">
     
 		<!-- include an external style sheet -->
+    <link rel="icon" href="favicon.ico" type="images/favicon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
 		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">  
     
 		<!-- include an external JavaScript file -->
@@ -19,7 +25,9 @@
 		<header>
 			<div id="logo">Weather API</div>
 			<div id="navSearch">
-				<input id="input" type="text" placeholder="Search Location">
+        <label>
+				  <input id="input" type="text" placeholder="Search Location">
+        </label>
 				<i id="search" onclick="fetchGeocode()" class="material-icons">search</i>
 			</div>
 			<i></i>
@@ -31,17 +39,14 @@
 					<div id="card1">
 						<div id="currentConditions">
 							<div id="currentConditionsHeader">
+                
 								<div id="currentConditionsLocation">
-								<i class="material-icons">location_on</i>
-								Location
-								</div>
-								
-								<div id="currentConditionsTime">
-								12:00 AM
-								</div>
+                  <i class="material-icons">location_on</i>
+                  <span class="locationElem">Location</span>
+                </div>
+								<div id="currentConditionsTime">12:00 AM</div>
 							</div>
 							
-					
 							<div id="currentConditionsData">
 								<div id="currentConditionsLeft">
 									<div id="currentConditionsTemp"> 11° </div>
@@ -49,31 +54,182 @@
 								</div>
 								
 								<div id="currentConditionsRight">
-									<img id="currentConditionsIcon" src="" alt="Icon">
+									<img id="currentConditionsIcon" src="https://openweathermap.org/img/wn/04d@4x.png" alt="Icon">
 								</div>
 							</div>
 							
 							<div id="currentConditionsData2">
-								<div id="currentConditionsPrecip"> Precipiation: 0% </div>
-								<div id="currentConditionsHumidity"> Humudity: 0% </div>
+								<div id="currentConditionsPrecip">
+                  <span>Precipiation: </span>
+                  <span class="pop">0%</span>
+                </div>
 							</div>
 						</div>
 					</div>
 					
 					<div id="card2">
-					Today's Forecast
+            <div id="todaysWeather">
+              <div id="todaysWeatherHeader">
+                <span>Today's Forecast for</span>
+                <span class="locationElem">Toronto</span>
+              </div>
+              
+              <div id="todaysWeatherForecast">
+                <div id="todaysWeatherMorning">
+                  <div id="todaysWeatherMorningHeader" class="todaysWeatherCardHeader">Morning</div>
+                  <div id="todaysWeatherMorningTemp" class="todaysWeatherTemp">11°</div>
+                  <img id="todaysWeatherMorningIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                </div>
+                
+                <div id="todaysWeatherAfternoon">
+                  <div id="todaysWeatherAfternoonHeader" class="todaysWeatherCardHeader">Afternoon</div>
+                  <div id="todaysWeatherAfternoonTemp" class="todaysWeatherTemp">11°</div>
+                  <img id="todaysWeatherAfternoonIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                </div>
+                
+                <div id="todaysWeatherEvening">
+                  <div id="todaysWeatherEveningHeader" class="todaysWeatherCardHeader">Evening</div>
+                  <div id="todaysWeatherEveningTemp" class="todaysWeatherTemp">11°</div>
+                  <img id="todaysWeatherEveningIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                </div>
+                
+                <div id="todaysWeatherNight">
+                  <div id="todaysWeatherNightHeader" class="todaysWeatherCardHeader">Night</div>
+                  <div id="todaysWeatherNightTemp" class="todaysWeatherTemp">11°</div>
+                  <img id="todaysWeatherNightIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                </div>
+              </div>
+            </div>
 					</div>
 					
 					<div id="card3">
-					Weather in City
+            <div id="weatherData">
+              <div id="weatherDataHeader">
+                <span>Weather Today in </span>
+                <span class="locationElem">Toronto, Ontario</span>
+              </div>
+              
+              <div id="weatherDataGrid" >
+                <div id="weatherDataLeft">
+                  <div id="weatherDataPrecip">
+                    <div class="weatherDataLabel">Precipitation</div>
+                    <div class="weatherDataValue pop">100%</div>
+                  </div>
+                  
+                  <div id="weatherDataHumidity">
+                    <div class="weatherDataLabel">Humidity</div>
+                    <div class="weatherDataValue humidity">100%</div>
+                  </div>
+                  
+                  <div id="weatherDataDewPoint">
+                    <div class="weatherDataLabel">Dew Point</div>
+                    <div class="weatherDataValue dew_point">100%</div>
+                  </div>
+                  
+                  <div id="weatherDataPressure">
+                    <div class="weatherDataLabel">Pressure</div>
+                    <div class="weatherDataValue pressure">100%</div>
+                  </div>
+                  
+                   <div id="weatherDataVisibility">
+                    <div class="weatherDataLabel">Visibility</div>
+                    <div class="weatherDataValue visibility">100%</div>
+                  </div>
+                 
+                </div>
+                
+                <div id="weatherDataRight">
+                    <div id="weatherDataWind">
+                    <div class="weatherDataLabel">Wind</div>
+                    <div class="weatherDataValue wind_speed">100%</div>
+                  </div>
+                  
+                  <div id="weatherDataClouds">
+                    <div class="weatherDataLabel">Clouds</div>
+                    <div class="weatherDataValue clouds">100%</div>
+                  </div>
+                  
+                  <div id="weatherDataRain">
+                    <div class="weatherDataLabel">Rain Volume</div>
+                    <div class="weatherDataValue rain">100%</div>
+                  </div>
+                  
+                  <div id="weatherDataSnow">
+                    <div class="weatherDataLabel">Snow Volume</div>
+                    <div class="weatherDataValue snow">0mm</div>
+                  </div>
+                  
+                  <div id="weatherDataUVIndex">
+                    <div class="weatherDataLabel">UV Index</div>
+                    <div class="weatherDataValue uvi">100%</div>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
 					</div>
-					
+				
+          <!--
 					<div id="card4">
 					Hourly Forecast
 					</div>
-					
+          -->
+          
 					<div id="card5">
-					Daily Forecast
+            <div id="dailyWeather">
+              <div id="dailyWeatherHeader">Daily Forecast</div>
+              <div id="dailyWeatherForecast">
+                <div id="dailyWeather0">
+                  <div id="dailyWeather0Header" class="dailyWeatherCardDate">Today</div>
+                  <div id="dailyWeather0Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather0Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather0Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+                
+                <div id="dailyWeather1">
+                  <div id="dailyWeather1Header" class="dailyWeatherCardDate">1</div>
+                  <div id="dailyWeather1Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather1Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather1Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+                
+                <div id="dailyWeather2">
+                  <div id="dailyWeather2Header" class="dailyWeatherCardDate">2</div>
+                  <div id="dailyWeather2Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather2Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather2Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+                
+                <div id="dailyWeather3">
+                  <div id="dailyWeather3Header" class="dailyWeatherCardDate">3</div>
+                  <div id="dailyWeather3Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather3Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather3Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+                
+                <div id="dailyWeather4">
+                  <div id="dailyWeather4Header" class="dailyWeatherCardDate">4</div>
+                  <div id="dailyWeather4Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather4Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather4Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+                
+                <div id="dailyWeather5">
+                  <div id="dailyWeather5Header" class="dailyWeatherCardDate">5</div>
+                  <div id="dailyWeather5Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather5Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather5Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+                
+                <div id="dailyWeather6">
+                  <div id="dailyWeather6Header" class="dailyWeatherCardDate">6</div>
+                  <div id="dailyWeather6Temp" class="dailyWeatherTemp">11°</div>
+                  <img id="dailyWeather6Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <div id="dailyWeather6Precip" class="dailyWeatherPrecip">0%</div>
+                </div>
+              </div>
+            </div>
 					</div>
 					
 					<div id="card6">
