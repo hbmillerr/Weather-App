@@ -24,8 +24,6 @@ body {
 	width: 100vw;
 }
 
-/* https://codepen.io/tutsplus/pen/gObLaEP */
-
 /* Navigation */
 
 header {
@@ -85,12 +83,18 @@ header {
 	order: -1;
 }
 
+#main {
+  
+}
+
 /* Grid Layout */
 
 
 #gridContainer {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
+  
+  width: 80%;
 	max-width: 1200px;
 	
 	margin: 24px auto;
@@ -102,33 +106,44 @@ header {
 	display: grid;
 	grid-template-areas: 
 	"card1"
-	"card2";
+	"card2" 
+  "card3"
+ /* "card4" */
+  "card5"
+  "card6";
 	grid-gap: 12px;
 }
 
 #cardContainer > div {
 	width: 100%;
 	
-	border-radius: 12px;
+	border-radius: 8px;
 	background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
 }
 
 #card1 {
 	grid-area: card1;
-	
-	box-shadow: 0 0 12px 0 rgba(0,0,0,.2)
 }
 
 #card2 {
 	grid-area: card2;
-	
-	box-shadow: 0 0 12px 0 rgba(0,0,0,.2)
 }
 
-#card2 {
-	grid-area: card2;
-	
-	box-shadow: 0 0 12px 0 rgba(0,0,0,.2)
+#card3 {
+	grid-area: card3;
+}
+
+#card4 {
+	grid-area: card4;
+}
+
+#card5 {
+	grid-area: card5;
+}
+
+#card6 {
+	grid-area: card6;
 }
 
 
@@ -137,12 +152,12 @@ header {
 /*Current Conditions*/
 
 #currentConditions {
-	padding: 20px 30px;
+	padding: 15px 15px;
 }
 
 #currentConditionsLocation {
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 #currentConditionsTime {
@@ -183,8 +198,146 @@ header {
 	font-weight: 400;
 }
 
+/* Today's Weather */
+
+#todaysWeather {
+  padding: 15px 15px;
+}
+
+#todaysWeatherHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+  margin-bottom: 15px;
+}
+
+#todaysWeatherForecast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#todaysWeatherForecast > div {
+  text-align: center;
+  padding: 0px 25px;
+  
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(200, 200, 200), rgba(0, 0, 0, 0)) 1 100%;
+}
+
+#todaysWeatherForecast > div:last-child {
+  border-right: none;
+}
+
+.todaysWeatherCardHeader {
+  font-size: 1.2rem;
+  
+}
+
+.todaysWeatherTemp {
+  font-size: 1.1rem;
+}
+
+.todaysWeatherIcon {
+  
+}
+
+/* Weather Data */
+
+#weatherData {
+  padding: 15px 15px;
+}
+
+#weatherDataHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#weatherDataGrid {
+  display: grid;
+  grid-gap: 0 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#weatherDataLeft {
+  margin-left: -15px;
+}
+
+#weatherDataRight {
+  margin-right: -15px;
+}
+
+#weatherDataLeft, #weatherDataRight {
+  padding: 0;
+  margin-top: 40px;
+}
+
+#weatherDataLeft > div, #weatherDataRight > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 6px 20px;
+  
+  border-top: 1px solid red;
+  border-top-width: 1px;
+  border-top-style: solid;
+  /*border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(200, 200, 200), rgba(0, 0, 0, 0)) 50;*/
+  border-color: rgb(200, 200, 200);
+}
+
+/* Daily Weather */
+#dailyWeather {
+  padding: 15px 15px;
+}
+
+#dailyWeatherHeader {
+  font-size: 1.5rem;
+  font-weight: 400;
+  
+  margin-bottom: 15px;
+}
+
+#dailyWeatherForecast {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#dailyWeatherForecast > div{
+  text-align: center;
+  padding: 0px 0px;
+  
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(200, 200, 200), rgba(0, 0, 0, 0)) 1 100%;
+}
+
+#dailyWeatherForecast > div:last-child {
+  border-right: none;
+}
+
+.dailyWeatherCardDate {
+  font-size: 1.2rem;
+  
+}
+.dailyWeatherTemp {
+  font-size: 1.1rem;
+}
+
 /* Icons */
 
 .locationIcon {
 	display: inline-block;
 }
+
+.dailyWeatherIcon, .todaysWeatherIcon{
+  width: 100px;
+  height: 100px;
+}
+
+#currentConditionsIcon {
+  width: 150px;
+  height: 150px;
+}
+
+/* Media Queries */
