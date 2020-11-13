@@ -9,11 +9,11 @@
     <meta name="Description" content="A weather app that displays the forecast.">
     <meta name="theme-color" content="#4a90e2">
     
-		<!-- include an external style sheet -->
+    <link rel="manifest" href="manifest.json">
     <link rel="icon" href="favicon.ico" type="images/favicon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
-		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">  
     
@@ -25,9 +25,8 @@
 		<header>
 			<div id="logo">Weather API</div>
 			<div id="navSearch">
-        <label>
-				  <input id="input" type="text" placeholder="Search Location">
-        </label>
+        <input id="input" type="text" placeholder="Search Location">
+        <label for="input">a</label>
 				<i id="search" onclick="fetchGeocode()" class="material-icons">search</i>
 			</div>
 			<i></i>
@@ -54,7 +53,7 @@
 								</div>
 								
 								<div id="currentConditionsRight">
-									<img id="currentConditionsIcon" src="https://openweathermap.org/img/wn/04d@4x.png" alt="Icon">
+									<img id="currentConditionsIcon" src="images/placeholder.png" alt="Icon">
 								</div>
 							</div>
 							
@@ -78,25 +77,25 @@
                 <div id="todaysWeatherMorning">
                   <div id="todaysWeatherMorningHeader" class="todaysWeatherCardHeader">Morning</div>
                   <div id="todaysWeatherMorningTemp" class="todaysWeatherTemp">11°</div>
-                  <img id="todaysWeatherMorningIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="todaysWeatherMorningIcon" class="todaysWeatherIcon" src="images/placeholder.png" alt="icon">
                 </div>
                 
                 <div id="todaysWeatherAfternoon">
                   <div id="todaysWeatherAfternoonHeader" class="todaysWeatherCardHeader">Afternoon</div>
                   <div id="todaysWeatherAfternoonTemp" class="todaysWeatherTemp">11°</div>
-                  <img id="todaysWeatherAfternoonIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="todaysWeatherAfternoonIcon" class="todaysWeatherIcon" src="images/placeholder.png" alt="icon">
                 </div>
                 
                 <div id="todaysWeatherEvening">
                   <div id="todaysWeatherEveningHeader" class="todaysWeatherCardHeader">Evening</div>
                   <div id="todaysWeatherEveningTemp" class="todaysWeatherTemp">11°</div>
-                  <img id="todaysWeatherEveningIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="todaysWeatherEveningIcon" class="todaysWeatherIcon" src="images/placeholder.png" alt="icon">
                 </div>
                 
                 <div id="todaysWeatherNight">
                   <div id="todaysWeatherNightHeader" class="todaysWeatherCardHeader">Night</div>
                   <div id="todaysWeatherNightTemp" class="todaysWeatherTemp">11°</div>
-                  <img id="todaysWeatherNightIcon" class="todaysWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="todaysWeatherNightIcon" class="todaysWeatherIcon" src="images/placeholder.png" alt="icon">
                 </div>
               </div>
             </div>
@@ -183,49 +182,49 @@
                 <div id="dailyWeather0">
                   <div id="dailyWeather0Header" class="dailyWeatherCardDate">Today</div>
                   <div id="dailyWeather0Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather0Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather0Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather0Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
                 
                 <div id="dailyWeather1">
                   <div id="dailyWeather1Header" class="dailyWeatherCardDate">1</div>
                   <div id="dailyWeather1Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather1Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather1Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather1Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
                 
                 <div id="dailyWeather2">
                   <div id="dailyWeather2Header" class="dailyWeatherCardDate">2</div>
                   <div id="dailyWeather2Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather2Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather2Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather2Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
                 
                 <div id="dailyWeather3">
                   <div id="dailyWeather3Header" class="dailyWeatherCardDate">3</div>
                   <div id="dailyWeather3Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather3Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather3Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather3Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
                 
                 <div id="dailyWeather4">
                   <div id="dailyWeather4Header" class="dailyWeatherCardDate">4</div>
                   <div id="dailyWeather4Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather4Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather4Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather4Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
                 
                 <div id="dailyWeather5">
                   <div id="dailyWeather5Header" class="dailyWeatherCardDate">5</div>
                   <div id="dailyWeather5Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather5Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather5Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather5Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
                 
                 <div id="dailyWeather6">
                   <div id="dailyWeather6Header" class="dailyWeatherCardDate">6</div>
                   <div id="dailyWeather6Temp" class="dailyWeatherTemp">11°</div>
-                  <img id="dailyWeather6Icon" class="dailyWeatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="icon">
+                  <img id="dailyWeather6Icon" class="dailyWeatherIcon" src="images/placeholder.png" alt="icon">
                   <div id="dailyWeather6Precip" class="dailyWeatherPrecip">0%</div>
                 </div>
               </div>
