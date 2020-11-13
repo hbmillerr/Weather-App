@@ -330,14 +330,19 @@ header {
 	display: inline-block;
 }
 
-.dailyWeatherIcon, .todaysWeatherIcon{
-  width: 100px;
+.dailyWeatherIcon{
   height: 100px;
+  width: 100px;
+}
+
+.todaysWeatherIcon {
+  height: 150px;
+  width: 150px;
 }
 
 #currentConditionsIcon {
-  width: 150px;
-  height: 150px;
+  height: 200px;
+  width: 200px;
 }
 
 /* Media Queries */
